@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>applpication page</title>
+</head>
+
+<fieldset id="Assign-books-fset">
+    <header id="header">
+        <h3>Book Assignment</h3>
+    </header>
+    <form name="assign-books-form" action="">
+
+        <div class="book-assignment">
+            <label for="sid"> Student ID:
+                <input type="text">
+            </label><br>
+            <label for="booktype"> Type of Book:
+                <select name="booktype" id="booktype">
+                    <option value="math">math</option>
+                    <option value="english">english</option>
+                    <option value="compsci">compsci</option>
+                </select>
+            </label><br>
+            <label for="bookcolor"> Color of Book:
+                <select name="bookcolor" id="bookcolor">
+                    <option value="#FFC0CB">pink</option>
+                    <option value="#FFFFFF">white</option>
+                </select>
+            </label><br>
+        </div>
+
+
+        <input type="button" name="ok" value="OK">
+        <input type="reset" name="cancel" value="Cancel">
+    </form>
+</fieldset>

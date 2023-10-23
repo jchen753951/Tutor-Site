@@ -1,0 +1,123 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Left Sidebar</title>
+    
+    <style>
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            
+        }
+
+        .sidebar {
+            background-color: #333;
+            color: #fff;
+            width: 250px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            margin-bottom: 65px;
+        }
+
+        .sidebar a:hover {
+            background-color: #474eb3;
+        }
+
+        .main-content {
+            flex: grow 1;
+            text-align: center;
+            padding: 20px
+        }
+
+        img {
+            max-width: 60%;
+            height: auto;
+            align-items: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class = "container">
+    <div class="sidebar">
+        <a href="student_registration.html">Registration</a>
+        <a href="tutor_registration.html">Tutor Enrollment</a>
+        <a href="book_assignment.html">Book Assignment</a>
+        <a href="enrollment.html">Enrollment:Tutor Sheet</a>
+        <a href="student_search.html">Student Search</a>
+
+    </div>
+    <div class="content">
+       
+    </div>
+
+    <div class="main-content">
+        <img src="welcome.png" alt="Main Image">
+    </div>
+
+    </div>
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+	<style>
+		body {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+			font-family: arial, sans-serif;
+		}
+		input, textarea {
+			display: block;
+			width: 300px;
+			font-size: 18px;
+			margin: 7px 0px;
+		}
+		label {
+			display: block;
+			padding: 2px 0px;
+		}
+	</style>
+</head>
+<body>
+    <form method="post" action="save.php">
+        <label>Name:</label>
+        <input type="text" name="name">
+        
+        <label>Message:</label>
+        <textarea name="id"></textarea>
+    
+        <input type="submit" name="btn">
+    </form>
+</body>
+</html>
