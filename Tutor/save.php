@@ -19,7 +19,7 @@ if (isset($_POST['name']) && isset($_POST['id'])) {
         $res = mysqli_query($db, $sql);
 
         if ($res) {
-            echo "Your message was sent successfully!";
+            echo "Your message was sent successfully! <a href='index.html'>Go back to index</a>";
         } else {
             echo "Your message could not be sent!";
         }

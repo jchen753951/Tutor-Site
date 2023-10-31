@@ -1,4 +1,5 @@
 <?php
+//Will update the database if the student already has a book. Will not duplicate book assignment.
 include 'server.php';
 
 if (isset($_POST['sid']) && isset($_POST['booktype']) && isset($_POST['bookcolor'])) {
@@ -16,13 +17,27 @@ if (isset($_POST['sid']) && isset($_POST['booktype']) && isset($_POST['bookcolor
     if (empty($student_id) || empty($book_type) || empty($book_color)) {
         echo "Please fill in all the required fields.";
     } else {
-        $sql = "INSERT INTO book (S_ID, type, color) VALUES ('$student_id', '$book_type', '$book_color')";
-        $res = mysqli_query($db, $sql);
+        $checkSql = "SELECT * FROM book WHERE S_ID = '$student_id' AND type = '$book_type'";
+        $checkResult = mysqli_query($db, $checkSql);
 
-        if ($res) {
-            echo "Book assignment saved successfully!";
+        if (mysqli_num_rows($checkResult) > 0) {
+            $updateSql = "UPDATE book SET color = '$book_color' WHERE S_ID = '$student_id' AND type = '$book_type'";
+            $updateResult = mysqli_query($db, $updateSql);
+
+            if ($updateResult) {
+                echo "Book color updated successfully!";
+            } else {
+                echo "Error updating book color: " . mysqli_error($db);
+            }
         } else {
-            echo "Error: " . mysqli_error($db);
+            $insertSql = "INSERT INTO book (S_ID, type, color) VALUES ('$student_id', '$book_type', '$book_color')";
+            $insertResult = mysqli_query($db, $insertSql);
+
+            if ($insertResult) {
+                echo "Book assignment saved successfully!";
+            } else {
+                echo "Error inserting book assignment: " . mysqli_error($db);
+            }
         }
     }
 } else {

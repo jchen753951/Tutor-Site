@@ -7,7 +7,7 @@
     , initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>applpication page</title>
+    <title>Tutor Registration</title>
 </head>
 
 <style>
@@ -44,28 +44,25 @@
                         <header id="header">
                             <h3>Tutor Registration</h3>
                         </header>
-                        <form name="register-tutor-form" action="">
+                        <form name="register-tutor-form" method="post" action="tutor_reg.php">
                             <div class="register-tutor">
                                 <div class="student-information">
                                     <label for="fname"> First Name:
-                                        <input type="text">
+                                        <input type="text" name="fname">
                                     </label><br>
                                     <label for="lname"> Last Name:
-                                        <input type="text">
+                                        <input type="text" name="lname">
                                     </label><br>
                                     <label for="minit"> Middle Initial:
-                                        <input type="text">
+                                        <input type="text" name="minit">
                                     </label> <br>
-
                                     <label for="degree"> Degree:
-                                        <input type="text">
+                                        <input type="text" name="degree">
                                     </label><br>
-                                    <input type="button" name="ok" value="OK">
-                                    <input type="button" name="reset" id="cancel-tutor-reg-btn" value="Cancel">
+                                    <input type="submit" name="submit" value="OK">
+                                    <input type="reset" name="reset" id="cancel-tutor-reg-btn" value="Cancel">
                                 </div>
-
                             </div>
-                            
                         </form>
                     </fieldset>
 

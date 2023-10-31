@@ -1,9 +1,11 @@
-<!--<!DOCTYPE html>
+
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website with Left Sidebar</title>
+    <title>C2 Education</title>
     
     <style>
         body {
@@ -11,6 +13,10 @@
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
+            background-image: url('background2.jpeg'); 
+            background-size: cover; 
+            background-position: center center; 
+            background-repeat: no-repeat;
         }
 
         .container {
@@ -55,9 +61,16 @@
         }
 
         img {
-            max-width: 60%;
+            max-width: 40%;
             height: auto;
             align-items: center;
+            bottom: 0;
+        }
+
+        button {
+            border: none;
+            background: none;
+            cursor: pointer;
         }
 
     </style>
@@ -72,19 +85,30 @@
         <a href="enrollment.html">Enrollment:Tutor Sheet</a>
         <a href="student_search.html">Student Search</a>
 
+      //  Add more links as needed
     </div>
     <div class="content">
-       
+        
     </div>
 
-    <div class="main-content">
-        <img src="welcome.png" alt="Main Image">
-    </div>
+    <img src="c2education.png" alt="Top Image">
+
+    <button onclick="buttonClick()">
+        <img src="simple.png" alt="Button Image">
+    </button>
+    
+    <script>
+        function buttonClick() {
+            alert("Hey...don't press my button!");
+            // what ever you guys wanted to add to the button click
+        }
+    </script>
 
     </div>
 </body>
 </html>
--->
+
+<!--
 <!DOCTYPE html>
 <html>
 <head>
@@ -113,11 +137,12 @@
     <form method="post" action="save.php">
         <label>Name:</label>
         <input type="text" name="name">
-        
+
         <label>Message:</label>
         <textarea name="id"></textarea>
-    
+
         <input type="submit" name="btn">
     </form>
 </body>
 </html>
+-->

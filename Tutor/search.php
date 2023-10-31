@@ -1,30 +1,50 @@
 <?php
-include 'server.php';
-
-if (isset($_POST['name']) && isset($_POST['id'])) {
-    function validate($data){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    function validate($data) {
         $data = trim($data);
         $data = stripslashes($data);
         $data = htmlspecialchars($data);
         return $data;
     }
 
-    $name = validate($_POST['name']);
-    $id = validate($_POST['id']);
-
-    if (empty($id) || empty($name)) {
-        echo "Both name and id are required!";
+    if (isset($_POST['enterfname'])) {
+        $firstName = validate($_POST['enterfname']);
     } else {
-        $sql = "INSERT INTO test (name, id) VALUES ('$name', '$id')";
-        $res = mysqli_query($db, $sql);
-
-        if ($res) {
-            echo "Your message was sent successfully!";
-        } else {
-            echo "Your message could not be sent!";
-        }
+        $firstName = "";
     }
+
+    if (isset($_POST['enterlname'])) {
+        $lastName = validate($_POST['enterlname']);
+    } else {
+        $lastName = "";
+    }
+
+    $db = mysqli_connect('localhost', 'root', '', 'c2education');
+
+    if (!$db) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $sql = "SELECT S_ID FROM student WHERE FName = '$firstName' AND LName = '$lastName'";
+    $result = mysqli_query($db, $sql);
+
+    if ($result) {
+        if ($row = mysqli_fetch_assoc($result)) {
+            $studentID = $row['S_ID'];
+        } else {
+            $studentID = "Student not found";
+        }
+    } else {
+        $studentID = "Error: " . mysqli_error($db);
+    }
+
+    mysqli_close($db);
+
+    echo "First Name: " . $firstName . "<br>";
+    echo "Last Name: " . $lastName . "<br>";
+    echo "Student ID: " . $studentID . "<br><a href='index.html'>Go back to Home</a>";
+
 } else {
-    header("Location: index.html");
+    echo "Invalid request or missing fields.";
 }
 ?>

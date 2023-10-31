@@ -24,14 +24,14 @@ if (isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['minit']) &
         $result = mysqli_query($db, $sql);
 
         if ($result) {
-            echo "Tutor information saved successfully!";
-        } else {    
+            echo nl2br ("Tutor information saved successfully! \n <a href='index.html'>Go back to Home</a>");
+        } else {
             echo "Error: " . mysqli_error($db);
         }
     } else {
-        echo "Please fill in all the required fields.";
+        echo nl2br ("Please fill in all the required fields. \n <a href='tutor_registration.html'>Go back to Tutor</a>");
     }
 } else {
-    echo "Invalid request or missing fields.";
+    echo nl2br ("Invalid request or missing fields. \n <a href='index.html'>Go back to Tutor</a>");
 }
 ?>

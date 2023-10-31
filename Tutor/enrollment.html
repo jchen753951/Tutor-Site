@@ -16,15 +16,15 @@
             <h3>Enrollment (Tutor Sheet)</h3>
         </header>
 
-        <form name="enrollment" action="book_save.php">
+        <form name="enrollment" method="post" action="enrollment_save.php">
             <label for="sid"> Student ID:
                 <input type="text">
             </label>
             <label for="start-time"> Start Time:
                 <input type="text">
-            </label>
+            </label>    
             <label for="date"> Date:
-                <input type="date">
+                <input type="text">
             </label> <br>
             <label for="tid"> Tutor ID:
                 <input type="text">
@@ -34,21 +34,21 @@
             </label>
             <label for="subject"> Subject:
                 <select name="subject" id="subject">
-                    <option value="math">math</option>
-                    <option value="english">english</option>
-                    <option value="compsci">compsci</option>
+                    <option value="Math">Math</option>
+                    <option value="Reading">Reading</option>
+                    <option value="Writing">Writing</option>
                 </select></label><br>
             <label for="confidence"> Confidence:
-                <input type="number" max="10" min="0" value="1">
+                <input type="number" max="7" min="0" value="1">
             </label>
             <label for="motivation"> Motivation:
-                <input type="number" max="10" min="0" value="1">
+                <input type="number" max="7" min="0" value="1">
             </label>
             <label for="focus"> Focus:
-                <input type="number" max="10" min="0" value="1">
+                <input type="number" max="7" min="0" value="1">
             </label>
             <label for="behavior"> Behavior:
-                <input type="number" max="10" min="0" value="1">
+                <input type="number" max="7" min="0" value="1">
             </label><br>
             <label for="homework"> Assigned Homework:</label><br>
             <textarea name="homework-space" id="homework-space" cols="30" rows="10"></textarea><br>
@@ -58,7 +58,7 @@
             <textarea name="homework-space" id="homework-space" cols="30" rows="10"></textarea><br>
 
             <div class="enrollment-buttons">
-                    <input type="button" name="ok" value="OK">
+                    <input type="submit" name="ok" value="OK">
                     <input type="reset" name="cancel" value="Cancel">
             </div>
         </form>

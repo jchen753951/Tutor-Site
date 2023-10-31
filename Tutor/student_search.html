@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>applpication page</title>
+    <title>Student Search</title>
 </head>
+<body>
+    <fieldset name="student-search-fset">
+        <div class="student-search">
+            <header id="header">
+                <h3>Student Search</h3>
+            </header>
+            <form name="search-name-form" method="post" action="search.php" onsubmit="return validateForm();">
+                <label for="searchfname">Enter First Name:</label>
+                <input type="text" name="enterfname" id="enterfname"><br>
+                <label for="searchlname">Enter Last Name:</label>
+                <input type="text" name="enterlname" id="enterlname"><br>
+                <input type="submit" value="Find" id="find" onclick="validateForm();">
+                <input type="reset" value="Cancel" id="cancel"><br>
+            </form>
+        </div>
+    </fieldset>
 
-<fieldset name="student-search-fset">
-    <div class="student-search">
-        <header id="header">
-            <h3>Student Search</h3>
-        </header>
-        <form name="search-name-form" action="">
-            <label for="searchname">Enter First Name:
-            </label>
-            <input type="text" name="enterfname" id="enterfname">
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("enterfname").value;
+            var lastName = document.getElementById("enterlname").value;
 
-            <input type="button" value="Find" id="find" onclick=""><br>
-            </label>
-            <label for="match-case">
-                <input type="checkbox" name="match-case" id="match-case">Match Case
+            if (firstName === "" && lastName === "") {
+                alert("Please enter a first name or last name.");
+                return false;
+            }
 
-            </label>
-            <label for="wrap-around">
-                <input type="checkbox" name="wrap-around" id="wrap-around"> Wrap Around
-            </label>
-            <input type="reset" value="Cancel" id="cancel"><br>
-            <label for="whole-words">
-                <input type="checkbox" name="whole-words" id="whole-words">Whole Words
-            </label>
-            <label for="search-backwards">
-                <input type="checkbox" name="search-backwards" id="search-backwards">Search Backwards
-            </label> <br>
-        </form>
-    </div>
-</fieldset>
+            return true;
+        }
+    </script>
+</body>
+</html>
