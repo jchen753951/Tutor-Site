@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>Enroll</title>
 </head>
+
 <body>
+    <!-- NAVBAR -->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
     <fieldset name="tutor-sheet-fset">
         <div class="enrollment-content">
             <header id="header">
@@ -20,7 +33,7 @@
                 </label>
                 <label for="start-time"> Start Time:
                     <input type="text" name="start_time" id="start-time">
-                </label>    
+                </label>
                 <label for="date"> Date:
                     <input type="text" name="date" id="date">
                 </label> <br>
@@ -63,4 +76,5 @@
         </div>
     </fieldset>
 </body>
+
 </html>
