@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Registration</title>
+</head>
+<body>
+    <fieldset id="C2-Student-Registration">
+        <header id="header">
+            <h3>C2 Student Registration</h3>
+        </header>
+        <style>
+            .container {
+                display: flex;
+                height: 100%;
+            }
+
+            .form-container {
+                flex-grow: 1;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .form-container form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .image-container {
+                flex-basis: 60%;
+                text-align: center;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        </style>
+        <div class="container">
+            <div class="form-container">
+                <form name="stu_guard_info" action="student_reg.php" method="post">
+                    <div class="student-registration">
+                        <h4>Student Information</h4>
+                        <div class="student-information">
+                            <label for="fname">First Name:
+                                <input type="text" name="fname">
+                            </label>
+                            <label for="minit">Middle Initial:
+                                <input type="text" name="minit">
+                            </label> <br>
+                            <label for="lname">Last Name:
+                                <input type="text" name="lname">
+                            </label>
+                            <label for="satdate">SAT Date:
+                                <input type="text" name="satdate">
+                            </label><br>
+                            <label for="glevel">Grade Level:
+                                <input type="text" name="glevel">
+                            </label>
+                            <label for="dob">DOB:
+                                <input type="text" name="dob">
+                            </label><br>
+                        </div>
+                        <div class="guardian-information">
+                            <h4>Guardian Information</h4>
+                            <label for="gfname">First Name:
+                                <input type="text" name="gfname">
+                            </label>
+                            <label for="gminit">Middle Initial:
+                                <input type="text" name="gminit">
+                            </label> <br>
+                            <label for="glname">Last Name:
+                                <input type="text" name="glname">
+                            </label>
+                            <label for="phone">Phone Number:
+                                <input type="text" name="phone">
+                            </label><br>
+                        </div>
+                        <input type="submit" name="ok" value="OK">
+                        <input type="reset" name="cancel" value="Cancel">
+                    </div>
+                </form>
+            </div>
+            <div class="image-container">
+                <img src="Registration.jpg" alt="Main Image">
+            </div>
+        </div>
+    </fieldset>
+</body>
+</html>

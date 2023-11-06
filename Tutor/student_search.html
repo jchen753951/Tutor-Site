@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Student Search</title>
+</head>
+<body>
+    <fieldset name="student-search-fset">
+        <div class="student-search">
+            <header id="header">
+                <h3>Student Search</h3>
+            </header>
+            <form name="search-name-form" method="post" action="search.php" onsubmit="return validateForm();">
+                <label for="searchfname">Enter First Name:</label>
+                <input type="text" name="enterfname" id="enterfname"><br>
+                <label for="searchlname">Enter Last Name:</label>
+                <input type="text" name="enterlname" id="enterlname"><br>
+                <input type="submit" value="Find" id="find" onclick="validateForm();">
+                <input type="reset" value="Cancel" id="cancel"><br>
+            </form>
+        </div>
+    </fieldset>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("enterfname").value;
+            var lastName = document.getElementById("enterlname").value;
+
+            if (firstName === "" && lastName === "") {
+                alert("Please enter a first name or last name.");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>

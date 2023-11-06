@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Enroll</title>
+</head>
+<body>
+    <fieldset name="tutor-sheet-fset">
+        <div class="enrollment-content">
+            <header id="header">
+                <h3>Enrollment (Tutor Sheet)</h3>
+            </header>
+
+            <form name="enrollment" method="post" action="enrollment_save.php">
+                <label for="sid"> Student ID:
+                    <input type="text" name="student_id" id="sid">
+                </label>
+                <label for="start-time"> Start Time:
+                    <input type="text" name="start_time" id="start-time">
+                </label>    
+                <label for="date"> Date:
+                    <input type="text" name="date" id="date">
+                </label> <br>
+                <label for="tid"> Tutor ID:
+                    <input type="text" name="tutor_id" id="tid">
+                </label>
+                <label for="duration"> Duration:
+                    <input type="text" name="duration" id="duration">
+                </label>
+                <label for="subject"> Subject:
+                    <select name="subject" id="subject">
+                        <option value="Math">Math</option>
+                        <option value="Reading">Reading</option>
+                        <option value="Writing">Writing</option>
+                    </select>
+                </label><br>
+                <label for="confidence"> Confidence:
+                    <input type="number" name="confidence" max="7" min="0" value="1">
+                </label>
+                <label for="motivation"> Motivation:
+                    <input type="number" name="motivation" max="7" min="0" value="1">
+                </label>
+                <label for="focus"> Focus:
+                    <input type="number" name="focus" max="7" min="0" value="1">
+                </label>
+                <label for="behavior"> Behavior:
+                    <input type="number" name="behavior" max="7" min="0" value="1">
+                </label><br>
+                <label for="homework"> Assigned Homework:</label><br>
+                <textarea name="assigned_homework" id="homework-space" cols="30" rows="10"></textarea><br>
+
+                <label for="comments"> Comments:</label><br>
+                <textarea name="comments" id="comments-space" cols="30" rows="10"></textarea><br>
+
+                <div class="enrollment-buttons">
+                    <input type="submit" name="ok" value="OK">
+                    <input type="reset" name="cancel" value="Cancel">
+                </div>
+            </form>
+        </div>
+    </fieldset>
+</body>
+</html>

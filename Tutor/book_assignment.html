@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Book Assignment</title>
+</head>
+
+<fieldset id="Assign-books-fset">
+    <header id="header">
+        <h3>Book Assignment</h3>
+    </header>
+    <form name="assign-books-form" action="book_save.php" method="post">
+
+        <div class="book-assignment">
+            <label for="sid"> Student ID:
+                <input type="text" name="sid">
+            </label><br>
+            <label for="booktype"> Type of Book:
+                <select name="booktype" id="booktype">
+                    <option value="math">Math</option>
+                    <option value="reading">Reading</option>
+                    <option value="writing">Writing</option>
+                </select>
+            </label><br>
+            <label for="bookcolor"> Color of Book:
+                <select name="bookcolor" id="bookcolor">
+                    <option value=white>White</option>
+                    <option value=yellow">Yellow</option>
+                    <option value=red">Red</option>
+                </select>
+            </label><br>
+        </div>
+
+        <input type="submit" name="ok" value="OK">
+        <input type="reset" name="cancel" value="Cancel">
+    </form>
+</fieldset>
+</html>

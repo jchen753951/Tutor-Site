@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Tutor Registration</title>
+</head>
+
+<style>
+    .container {
+        display: flex;
+        height: 100%;
+    }
+
+    .form-container {
+        flex-grow: 1;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-container {
+        flex-basis: 60%; 
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+</style>
+
+    <div class = "container">
+        <div class = "form-container">
+                    <fieldset id="Tutor-Registration">
+                        <header id="header">
+                            <h3>Tutor Registration</h3>
+                        </header>
+                        <form name="register-tutor-form" method="post" action="tutor_reg.php">
+                            <div class="register-tutor">
+                                <div class="student-information">
+                                    <label for="fname"> First Name:
+                                        <input type="text" name="fname">
+                                    </label><br>
+                                    <label for="lname"> Last Name:
+                                        <input type="text" name="lname">
+                                    </label><br>
+                                    <label for="minit"> Middle Initial:
+                                        <input type="text" name="minit">
+                                    </label> <br>
+                                    <label for="degree"> Degree:
+                                        <input type="text" name="degree">
+                                    </label><br>
+                                    <input type="submit" name="submit" value="OK">
+                                    <input type="reset" name="reset" id="cancel-tutor-reg-btn" value="Cancel">
+                                </div>
+                            </div>
+                        </form>
+                    </fieldset>
+
+                    <div class="image-container">
+                        <img src="tutorR.png" alt="Main Image">
+                    </div>
+
+
+        </div>
+    </div>
