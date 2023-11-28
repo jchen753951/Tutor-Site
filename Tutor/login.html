@@ -5,6 +5,24 @@
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
+  <style>
+  .loginForm{
+align-items: center;
+flex-grow: 1;
+            padding: 20px;
+  }
+  body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            background-image: url('background2.jpeg'); 
+            background-size: cover; 
+            background-position: center center; 
+            background-repeat: no-repeat;
+        }
+
+  </style>
 </head>
 <body>
      <!-- NAVBAR -->
@@ -18,7 +36,7 @@
             });
         </script>
   <h1>Login</h1>
-  <form id="loginForm">
+  <form class ="loginForm" id="loginForm">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br>
 
