@@ -1,74 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <style>
-  .loginForm{
-align-items: center;
-flex-grow: 1;
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .sidebar a:hover {
+            font-weight: 900;
+        }
+
+        .loginForm {
+            align-items: center;
+            flex-grow: 1;
             padding: 20px;
-  }
-  body {
+        }
+
+        body {
             display: flex;
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
-            background-size: cover; 
-            background-position: center center; 
+            background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
         }
-
-  </style>
+    </style>
 </head>
+
 <body>
-     <!-- NAVBAR -->
-     <div id="nav-placeholder">
+    <!-- NAVBAR -->
+    <div id="nav-placeholder">
 
-        </div>
-    
-        <script>
-            $(function () {
-                $("#nav-placeholder").load("navbar.html");
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <h1>Login</h1>
+    <form class="loginForm" id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="otp">OTP:</label>
+        <input type="text" id="otp" name="otp" required><br>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+
+    <script>
+        async function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const otp = document.getElementById('otp').value;
+
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password, otp }),
             });
-        </script>
-  <h1>Login</h1>
-  <form class ="loginForm" id="loginForm">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br>
-
-    <label for="otp">OTP:</label>
-    <input type="text" id="otp" name="otp" required><br>
-
-    <button type="button" onclick="login()">Login</button>
-  </form>
-
-  <script>
-    async function login() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-      const otp = document.getElementById('otp').value;
-
-      const response = await fetch('http://localhost:3000/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ username, password, otp }),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        alert(`Login successful! Access Token: ${data.accessToken}`);
-      } else {
-        alert('Login failed. Please check your credentials and OTP.');
-      }
-    }
-  </script>
+            if (response.ok) {
+                const data = await response.json();
+                alert(`Login successful! Access Token: ${data.accessToken}`);
+            } else {
+                alert('Login failed. Please check your credentials and OTP.');
+            }
+        }
+    </script>
 </body>
+
 </html>
