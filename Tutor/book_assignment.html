@@ -9,18 +9,21 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>Book Assignment</title>
     <style>
-    body {
+        body {
             display: flex;
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
-            background-size: cover; 
-            background-position: center center; 
+            background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: antialiased;
         }
+
         .assign-books-fset {
+            background-color: aliceblue;
+
             width: 300px;
             height: 200px;
             /* Adjust the width as needed */
@@ -30,8 +33,44 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: auto;
         }
-        
-        </style>
+
+        .header-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* Updated property */
+            width: 100%;
+            /* Updated width property to cover the entire width */
+            height: 100px;
+            /* Set the desired height */
+            background: url('banner.jpg') center/cover no-repeat;
+        }
+
+        .image-container img {
+            margin-top: 250px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .buttons {
+
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons:hover {
+            background-color: var(--random-color);
+            /* Hover color */
+        }
+    </style>
 </head>
 
 <body>
@@ -39,13 +78,22 @@
     <div id="nav-placeholder">
 
     </div>
-
+    <script>
+        // JavaScript to set a random color variable
+        const randomColors = ['#007880', '#EB8F21', '#AF2C66'];
+        document.documentElement.style.setProperty('--random-color', randomColors[Math.floor(Math.random() * randomColors.length)]);
+    </script>
     <script>
         $(function () {
             $("#nav-placeholder").load("navbar.html");
         });
     </script>
+    <a href="index.html"> <img class="logo" src="c2educationSmall.png" alt="Top Image"></a>
+
     <fieldset class="assign-books-fset" id="Assign-books-fset">
+        <div class="header-photo">
+
+        </div>
         <header id="header">
             <h3>Book Assignment</h3>
         </header>
@@ -71,8 +119,8 @@
                 </label><br>
             </div>
 
-            <input type="submit" name="ok" value="OK">
-            <input type="reset" name="cancel" value="Cancel">
+            <input type="submit" name="ok" value="OK" class="buttons">
+            <input type="reset" name="cancel" value="Cancel" class="buttons">
         </form>
     </fieldset>
 </body>
