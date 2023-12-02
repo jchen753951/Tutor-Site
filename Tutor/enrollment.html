@@ -10,14 +10,68 @@
     <title>Enroll</title>
 
     <style>
-     body {
+        body {
             display: flex;
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
-            background-size: cover; 
-            background-position: center center; 
+            background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
+        }
+
+        .header-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* Updated property */
+            width: 100%;
+            /* Updated width property to cover the entire width */
+            height: 100px;
+            /* Set the desired height */
+            background: url('banner.jpg') center/cover no-repeat;
+        }
+
+        .image-container img {
+            margin-top: 250px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .buttons {
+
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons:hover {
+            background-color: var(--random-color);
+            /* Hover color */
+        }
+
+        .tutor-sheet-fset {
+            background-color: aliceblue;
+            width: auto;
+            height: auto;
+            /* Adjust the width as needed */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-left: 200px;
+            margin-top: 115px;
+            /* Adjust the margin as needed */
+
+
         }
     </style>
 </head>
@@ -33,7 +87,18 @@
             $("#nav-placeholder").load("navbar.html");
         });
     </script>
-    <fieldset name="tutor-sheet-fset">
+    <script>
+
+        // JavaScript to set a random color variable
+        const randomColors = ['#007880', '#EB8F21', '#AF2C66'];
+        document.documentElement.style.setProperty('--random-color', randomColors[Math.floor(Math.random() * randomColors.length)]);
+    </script>
+    <a href="index.html"> <img class="logo" src="c2educationSmall.png" alt="Top Image"></a>
+
+    <div class="header-photo">
+
+    </div>
+    <fieldset class="tutor-sheet-fset" name="tutor-sheet-fset">
         <div class="enrollment-content">
             <header id="header">
                 <h3>Enrollment (Tutor Sheet)</h3>
@@ -81,8 +146,8 @@
                 <textarea name="comments" id="comments-space" cols="30" rows="10"></textarea><br>
 
                 <div class="enrollment-buttons">
-                    <input type="submit" name="ok" value="OK">
-                    <input type="reset" name="cancel" value="Cancel">
+                    <input type="submit" name="ok" value="OK" class="buttons">
+                    <input type="reset" name="cancel" value="Cancel" class="buttons">
                 </div>
             </form>
         </div>
