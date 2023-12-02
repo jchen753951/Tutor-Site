@@ -37,4 +37,6 @@ body {
     background-size: cover; 
     background-position: center center; 
     background-repeat: no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: antialiased;
 }

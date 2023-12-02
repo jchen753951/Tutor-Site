@@ -9,15 +9,27 @@
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>Student Search</title>
     <style>
-    body {
+        body {
             display: flex;
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
-            background-size: cover; 
-            background-position: center center; 
+            background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
-        }</style>
+        }
+
+        .student-search-fset {
+            width: 300px;
+            height: 200px;
+            /* Adjust the width as needed */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,7 +43,7 @@
             $("#nav-placeholder").load("navbar.html");
         });
     </script>
-    <fieldset class = "student-search-fset" name="student-search-fset">
+    <fieldset class="student-search-fset" name="student-search-fset">
         <div class="student-search">
             <header id="header">
                 <h3>Student Search</h3>

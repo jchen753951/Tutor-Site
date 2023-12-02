@@ -6,46 +6,64 @@
     <meta name="viewport" content="width=
     , initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>Tutor Registration</title>
     <style>
+        a.hover {
+            font-weight: 900;
+        }
+
         body {
             display: flex;
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
-            background-size: cover; 
-            background-position: center center; 
+            background-size: cover;
+            background-position: center center;
             background-repeat: no-repeat;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: antialiased;
         }
-            .container {
-                display: flex;
-                height: 100%;
-            }
-        
-            .form-container {
-                flex-grow: 1;
-                padding: 20px;
-                box-sizing: border-box;
-            }
-        
-            .form-container form {
-                display: flex;
-                flex-direction: column;
-            }
-        
-            .image-container {
-                flex-basis: 60%;
-                text-align: center;
-            }
-        
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-        
-        </style>
+
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        .form-container {
+            flex-grow: 1;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .image-container {
+            flex-basis: 60%;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .tutor-Registration-fset {
+            width: 300px;
+            height: 200px;
+            /* Adjust the width as needed */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+
+        }
+    </style>
 </head>
 
 
@@ -63,7 +81,7 @@
     </script>
     <div class="container">
         <div class="form-container">
-            <fieldset id="Tutor-Registration">
+            <fieldset class="tutor-Registration-fset" id="Tutor-Registration">
                 <header id="header">
                     <h3>Tutor Registration</h3>
                 </header>
@@ -86,12 +104,13 @@
                             <input type="reset" name="reset" id="cancel-tutor-reg-btn" value="Cancel">
                         </div>
                     </div>
+                    <!-- <div class="image-container">
+                            <img src="tutorR.png" alt="Main Image">
+                        </div> -->
                 </form>
             </fieldset>
 
-            <div class="image-container">
-                <img src="tutorR.png" alt="Main Image">
-            </div>
+
 
 
         </div>
