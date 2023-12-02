@@ -54,7 +54,6 @@
         img {
             max-width: 100%;
             height: auto;
-            background-color: #ccc;
 
         }
 
@@ -85,19 +84,50 @@
             /* Set the desired height */
             background: url('banner.jpg') center/cover no-repeat;
         }
-        .image-container img{
-            margin-top: 250px; !important
 
+        .image-container img {
+            margin-top: 250px;
         }
-        
 
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .logo img {}
+
+        .buttons {
+
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons:hover {
+            background-color: var(--random-color);
+            /* Hover color */
+        }
+
+        /* colors from image */
+        /* #007880 teal
+        #EB8F21 orqnge 
+        #AF2C66 pink
+        #04316B blue  */
     </style>
-
 </head>
 
 
 
 <body>
+    <script>
+        // JavaScript to set a random color variable
+        const randomColors = ['#007880', '#EB8F21', '#AF2C66'];
+        document.documentElement.style.setProperty('--random-color', randomColors[Math.floor(Math.random() * randomColors.length)]);
+    </script>
     <!-- NAVBAR -->
     <div id="nav-placeholder">
 
@@ -110,9 +140,12 @@
     </script>
     <div class="container">
         <div class="form-container">
+            <a href="index.html"> <img class="logo" src="c2educationSmall.png" alt="Top Image"></a>
             <div class="image-container">
-                <!-- New div for the header photo -->
-                <div class="header-photo"></div>
+
+                <div class="header-photo">
+
+                </div>
             </div>
             <fieldset class="tutor-Registration-fset" id="Tutor-Registration">
                 <header id="header">
@@ -133,8 +166,8 @@
                             <label for="degree"> Degree:
                                 <input type="text" name="degree">
                             </label><br>
-                            <input type="submit" name="submit" value="OK">
-                            <input type="reset" name="reset" id="cancel-tutor-reg-btn" value="Cancel">
+                            <input type="submit" name="submit" value="OK" class="buttons">
+                            <input type="reset" name="reset" class="buttons" value="Cancel">
                         </div>
                     </div>
 
