@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>Student Registration</title>
 </head>
+
 <body>
-    <fieldset id="C2-Student-Registration">
+    <!-- NAVBAR -->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <fieldset class="C2-Student-Registration"id="C2-Student-Registration">
         <header id="header">
             <h3>C2 Student Registration</h3>
         </header>
@@ -38,7 +51,61 @@
                 max-width: 100%;
                 height: auto;
             }
+
+            .header-photo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                /* Updated property */
+                width: 100%;
+                /* Updated width property to cover the entire width */
+                height: 100px;
+                /* Set the desired height */
+                background: url('banner.jpg') center/cover no-repeat;
+            }
+
+            .image-container img {
+                margin-top: 250px;
+            }
+
+            .logo {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .buttons {
+
+                padding: 10px;
+                border: none;
+                cursor: pointer;
+                margin-top: 10px;
+                transition: background-color 0.3s ease;
+            }
+
+            .buttons:hover {
+                background-color: var(--random-color);
+                /* Hover color */
+            }
+            .C2-Student-Registration {
+            margin-top: 115px; /* Adjust the margin as needed */
+            background-color:aliceblue;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
         </style>
+        <script>
+            // JavaScript to set a random color variable
+            const randomColors = ['#007880', '#EB8F21', '#AF2C66'];
+            document.documentElement.style.setProperty('--random-color', randomColors[Math.floor(Math.random() * randomColors.length)]);
+        </script>
+        <a href="index.html"> <img class="logo" src="c2educationSmall.png" alt="Top Image"></a>
+        <div class="header-photo">
+
+        </div>
         <div class="container">
             <div class="form-container">
                 <form name="stu_guard_info" action="student_reg.php" method="post">
@@ -79,8 +146,8 @@
                                 <input type="text" name="phone">
                             </label><br>
                         </div>
-                        <input type="submit" name="ok" value="OK">
-                        <input type="reset" name="cancel" value="Cancel">
+                        <input type="submit" name="ok" value="OK" class="buttons">
+                        <input type="reset" name="cancel" value="Cancel" class="buttons">
                     </div>
                 </form>
             </div>
@@ -90,4 +157,5 @@
         </div>
     </fieldset>
 </body>
+
 </html>

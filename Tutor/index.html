@@ -13,11 +13,24 @@
             font-family: Arial, sans-serif;
             margin: 0;
             height: 100vh;
-            background-image: url('background2.jpeg'); 
+            background-image: url('background2.jpg'); 
             background-size: cover; 
             background-position: center center; 
             background-repeat: no-repeat;
         }
+        body,
+        html {
+            font-family: DM Sans, Arial, Helvetica, sans-serif;
+            /* font-size: 14px; */
+            line-height: 20px;
+            background-color: #fff;
+            color: #132322;
+            height: 100vh;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: antialiased;
+        }
+
 
         .container {
             display: flex;
@@ -47,11 +60,12 @@
             display: block;
             color: #fff;
             text-decoration: none;
-            margin-bottom: 65px;
+            margin-bottom: 45px;
+
         }
 
         .sidebar a:hover {
-            background-color: #474eb3;
+        font-weight: 900;
         }
 
         .main-content {
@@ -85,13 +99,12 @@
         <a href="enrollment.html">Enrollment:Tutor Sheet</a>
         <a href="student_search.html">Student Search</a>
 
-      //  Add more links as needed
     </div>
     <div class="content">
         
     </div>
 
-    <img src="c2education.png" alt="Top Image">
+    <img class="logo" src="c2education.png" alt="Top Image">
 
     <button onclick="buttonClick()">
         <img src="simple.png" alt="Button Image">
@@ -99,8 +112,7 @@
     
     <script>
         function buttonClick() {
-            alert("Hey...don't press my button!");
-            // what ever you guys wanted to add to the button click
+           location.href = 'login.html';
         }
     </script>
 
