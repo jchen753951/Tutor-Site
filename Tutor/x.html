@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sign Up Sheet</title>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <link rel="stylesheet" type="text/css" href="x.css">
     </head>
     <style>
@@ -62,6 +63,60 @@ button {
     width: 100%;
 }
 
+.header-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* Updated property */
+            width: 100%;
+            /* Updated width property to cover the entire width */
+            height: 100px;
+            /* Set the desired height */
+            background: url('banner.jpg') center/cover no-repeat;
+        }
+
+        .image-container img {
+            margin-top: 250px;
+        }
+
+        .logo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .buttons {
+
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .buttons:hover {
+            background-color: var(--random-color);
+            /* Hover color */
+        }
+
+        .tutor-sheet-fset {
+            background-color: aliceblue;
+            width: auto;
+            height: auto;
+            /* Adjust the width as needed */
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: auto;
+            margin-left: 200px;
+            margin-top: 115px;
+            /* Adjust the margin as needed */
+
+
+        }
+
 button:hover {
     background-color: #45a049;
 }
@@ -70,6 +125,12 @@ button:hover {
 
     <body>
             <a href="index.html"> <img class="logo" src="c2educationSmall.png" alt="Top Image"></a>
+
+            <script>
+                    $(function () {
+                        $("#nav-placeholder").load("navbar.html");
+                    });
+                </script>
 
         <div class="signup-container">
             <h1>Sign Up</h1>
