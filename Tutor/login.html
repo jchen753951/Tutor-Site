@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        .sidebar a:hover {
+            font-weight: 900;
+        }
+
+        .loginForm {
+            align-items: center;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        body {
+            display: flex;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: antialiased;
+        }
+
+        .login_wrapper-inner {
+            background-color: #fff;
+            border-top-right-radius: 8px;
+            border-top-left-radius: 8px;
+        }
+
+        .login_credentials_wrap-inner,
+        .login_wrapper-inner {
+            width: 70%;
+            max-width: 780px;
+            padding: 15px 30px 30px;
+            margin: 0 auto;
+            border: 1px solid #ededed;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        /* body,
+        html {
+            font-family: DM Sans, Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            background-color: #fff;
+            color: #132322;
+            height: 100vh;
+            margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: antialiased;
+        } */
+
+        .btn_action {
+            background-color: #3ddc91;
+            border-radius: 4px;
+            color: #132322;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+        $(function () {
+            $("#nav-placeholder").load("navbar.html");
+        });
+    </script>
+    <!-- <h1>Login</h1>
+    <form class="loginForm" id="loginForm">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="otp">OTP:</label>
+        <input type="text" id="otp" name="otp" required><br>
+
+        <button type="button" onclick="login()">Login</button>
+    </form> -->
+
+    <!-- <script>
+        async function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const otp = document.getElementById('otp').value;
+
+            const response = await fetch('http://localhost:3000/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password, otp }),
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                alert(`Login successful! Access Token: ${data.accessToken}`);
+            } else {
+                alert('Login failed. Please check your credentials and OTP.');
+            }
+        }
+    </script> -->
+ 
+    <div class="login_wrapper-inner">
+            <div class="header">
+                    <h2>C2 Education</h2>
+                    <p>eventully this page should be replaced with the firebase login stuff</p>
+                </div>
+        <div id="login_button_container" class="form_column">
+            <div class="login-box">
+                <form>
+                    <div class="form_group"><input class="input_error form_input" placeholder="Username" type="text"
+                            data-test="username" id="user-name" name="user-name" autocorrect="off" autocapitalize="none"
+                            value=""></div>
+                    <div class="form_group"><input class="input_error form_input" placeholder="Password" type="password"
+                            data-test="password" id="password" name="password" autocorrect="off" autocapitalize="none"
+                            value=""></div>
+                    <div class="error-message-container"></div><input type="submit" class="submit-button btn_action"
+                        data-test="login-button" id="login-button" name="login-button" value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
