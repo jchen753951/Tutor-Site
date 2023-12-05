@@ -1,10 +1,10 @@
 <?php
-require __DIR__ . '/vendor/autoload.php'; // Include Firebase SDK
+require __DIR__ . '/../vendor/autoload.php';
 
 use Kreait\Firebase\Factory;
 
 // Initialize Firebase
-$factory = (new Factory)->withServiceAccount('/credentials/account_key.json');
+$factory = (new Factory)->withServiceAccount(__DIR__ . '/../credentials/account_key.json');
 $auth = $factory->createAuth();
 
 // Function to handle login
