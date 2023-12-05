@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>Student Search</title>
     <style>
@@ -22,7 +21,6 @@
         .student-search-fset {
             width: 300px;
             height: 200px;
-            /* Adjust the width as needed */
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -42,18 +40,14 @@
 
         .buttons:hover {
             background-color: var(--random-color);
-            /* Hover color */
         }
 
         .header-photo {
             position: absolute;
             top: 0;
             left: 0;
-            /* Updated property */
             width: 100%;
-            /* Updated width property to cover the entire width */
             height: 100px;
-            /* Set the desired height */
             background: url('banner.jpg') center/cover no-repeat;
         }
 
@@ -71,7 +65,6 @@
 </head>
 
 <body>
-    <!-- NAVBAR -->
     <div id="nav-placeholder">
 
     </div>
@@ -89,7 +82,7 @@
             <header id="header">
                 <h3>Student Search</h3>
             </header>
-            <form name="search-name-form" method="post" action="result.php" onsubmit="return validateForm();">
+            <form name="search-name-form" method="post" action="search.php" onsubmit="return validateForm();">
                 <label for="searchfname">Enter First Name:</label>
                 <input type="text" name="enterfname" id="enterfname"><br>
                 <label for="searchlname">Enter Last Name:</label>
@@ -114,7 +107,6 @@
         }
     </script>
     <script>
-            // JavaScript to set a random color variable
             const randomColors = ['#007880', '#EB8F21', '#AF2C66'];
             document.documentElement.style.setProperty('--random-color', randomColors[Math.floor(Math.random() * randomColors.length)]);
         </script>
