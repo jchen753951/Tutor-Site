@@ -4,8 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up Sheet</title>
+    <title>Login Page</title>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+    <script src="auth.js"></script>
+
+
     <link rel="stylesheet" type="text/css" href="x.css">
 </head>
 <style>
@@ -144,8 +152,8 @@
         <h1>Sign Up</h1>
         <!-- must have onsubmit="return false;"-->
         <form id="signup-form" onsubmit="return false;">
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
+<!--            <label for="name">Name:</label>-->
+<!--            <input type="text" id="name" required>-->
 
             <label for="email">Email:</label>
             <input type="email" id="email" required>
@@ -154,19 +162,10 @@
             <input type="password" id="password" required>
 
             <!-- Must have onclick = "function(event)" -->
-            <button class="buttons" onclick="register(event)">Register</button>
+<!--            <button class="buttons" onclick="register(event)">Register</button>-->
             <button class="buttons" onclick="login(event)">Login</button>
         </form>
     </div>
 </body>
-
-<!-- need these imports!!!!! -->
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
-<script src="auth.js"></script>
 
 </html>
