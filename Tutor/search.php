@@ -1,4 +1,5 @@
 <?php
+header("Content-Type: application/json")
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     function validate($data) {
         $data = trim($data);
@@ -40,9 +41,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     mysqli_close($db);
 
-    echo "First Name: " . $firstName . "<br>";
-    echo "Last Name: " . $lastName . "<br>";
-    echo "Student ID: " . $studentID . "<br><a href='index.html'>Go back to Home</a>";
+    $response[
+        "firstName" =>$firstName,
+        "lastName" =>$lastName,
+        "studentID" =>$studentID
+    ];
+
+    echo json_encode($response);
+
+    // echo "First Name: " . $firstName . "<br>";
+    // echo "Last Name: " . $lastName . "<br>";
+    // echo "Student ID: " . $studentID . "<br><a href='index.html'>Go back to Home</a>";
 
 } else {
     echo "Invalid request or missing fields.";
