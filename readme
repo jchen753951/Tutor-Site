@@ -1,1 +1,62 @@
-BLAH
+# C2 Education Tutor Site
+A PHP/HTML/CSS fullstack site and database for a tutoring company.
+
+The aim of the project is to create a full stack website with a database for a tutoring center that allows tutors and students to manage study  materials tailored to student needs. 
+The front end aims to be clean and intuitive, and the database will store information about students and their guardians,  tutors, books,  and sessions.
+The goal of our site is to be simple,  yet powerful.
+
+# FRONTEND
+Started with the skeleton of the site
+One file with all the html elements, styled for format reasons only
+Then we split the site into their own respective files/pages
+Still no styling
+Side bar implemented 
+Little to no navigation between pages	
+Then we were able to build out each page
+Sidebar navigation between pages (jquery implementation)
+Added images, styling (fonts, fieldset/ form coloring and formatting)
+Top banner and logo (link to landing page)
+Button hover (random theme color generator, bolding)
+
+# BACKEND
+Create PHP scripts to handle CRUD (Create, Read, Update, Delete) operations for each entity 
+Students
+Guardians
+Tutors
+Books
+Sessions
+Use RESTful principles for endpoint naming. For example: 
+/api/students (GET for fetching all students, POST for adding a new student) 
+/api/tutors/{id} (GET, PUT, DELETE for a specific tutor) 
+Ensure proper error handling and validation in your PHP scripts.
+
+User Login
+-Inputs email and password and output 
+-Authentication
+-Utilize Firebase Authentication for secure user login
+-Ensure that only authenticated users can access protected routes.
+Deployment
+-Deploy the login API on the server
+-Use variables for sensitive information
+Conclusion 
+-The login API plays a critical role in securing the tutoring center website 
+-Ongoing monitoring to security to ensure a reliable authentication mechanism 
+
+Users will be able to : 
+-update information in the database 
+-generate lists of students, tutors, guardians, books, and sessions 
+Set up firebase to store credentials from login page
+-JavaScript to handle data
+Hosting  
+-Site hosted on 000webhost 
+-Configured to work with database on PhPMyAdmin
+
+High-Scale Checklist
+Create simple front pages for minimal functionality (done)
+Create a database that can hold all inputted forms and data. (done)
+Create multiple php pages to handle each form. (done)
+Create scripts for R/W data. (done)
+Implement the API / Login. (done)
+Create ease of navigation and quality of life aspects. (done)
+Security measure (maybe)
+Host site. (done)
